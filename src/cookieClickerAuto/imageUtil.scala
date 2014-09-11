@@ -23,7 +23,7 @@ class imageUtil {
 	}
 	def colorEncorder(image:BufferedImage, width:Int, height:Int, rgb:Array[Array[(Int, Int, Int)]])={
 		var r=0;var g=0;var b=0;
-    	for(i <- 0 to 0;j <- 0 to 0){
+    	for(i <- 0 to width-1;j <- 0 to height-1){
     	  r = rgb(i)(j)._1 
     	  g = rgb(i)(j)._2
     	  b = rgb(i)(j)._3

@@ -4,9 +4,9 @@ object Main {
 	def main(args:Array[String]):Unit={
 	  val img = new imageUtil()
 	  
-	  val path1 = "C:\\Users\\hiroto\\Pictures\\image.png"
-	  val path2 = "C:\\Users\\hiroto\\Pictures\\image2.png"
- 	  val path3 = "C:\\Users\\hiroto\\Pictures\\image3.png"
+	  val path1 = "C:\\Users\\hiroto\\Pictures\\Lenna.png"
+	  val path2 = "C:\\Users\\hiroto\\Pictures\\Lenna2.png"
+ 	  val path3 = "C:\\Users\\hiroto\\Pictures\\Lenna3.png"
 
 	  val image1 = img.readImg(path1)
   	  val image2 = img.readImg(path2)
@@ -32,18 +32,18 @@ object Main {
 		  g = color2(i)(j)._2  - color1(i)(j)._2
 	      b = color2(i)(j)._3  - color1(i)(j)._3
 	      color3(i)(j) = (r.abs,g.abs,b.abs)	  
-	  }
-	  */
+	  }*/
+	  
 	  
 	  //image1ÇÃêFîΩì] 
 	  var r2=0;var g2=0;var b2=0;
 	  for(i <- 0 to width - 1;j <- 0 to height - 1){
 		  r2 = color1(i)(j)._1 - 255
 		  g2 = color1(i)(j)._2 - 255
-	      b2 = color2(i)(j)._3 - 255
+	      b2 = color1(i)(j)._3 - 255
 	      color3(i)(j) = (r2.abs,g2.abs,b2.abs)	  
 	  }
 	  //èoóÕ  
-	  img.outputImg(img.colorEncorder(image3,width,height,color3), path3, "jpeg")	  
+	  img.outputImg(img.colorEncorder(image3, width, height,color3), path3, "png")	  
     }
 }
